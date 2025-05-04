@@ -1,0 +1,111 @@
+stock1 = "Amber"
+stock1_pe = 15
+stock2 = "HUL"
+stock2_pe = 30
+
+if stock1_pe > stock2_pe:
+    print("stock1 is more expensive")
+else:
+    print("stock2 is more expensive")
+
+pe_ratio = 12
+if pe_ratio < 15:
+    print("Stock is undervalued")
+else:
+    print("Stock is fairly or overvalued")
+
+de_ratio = 0.4
+if de_ratio < 0.5:
+    print("Financially strong company")
+else:
+    print("High leverage risk")
+
+roe = 18
+if roe >= 20:
+    print("High return on equity")
+else:
+    print("Low return on equity")
+
+pe = 20
+eps_growth = 18  # in %
+if pe < 25 and eps_growth > 15:
+    print("Good Growth + Value stock")
+else:
+    print("Not ideal for GARP invetors")
+
+dividend_yield = 3.2
+payout_ratio = 40
+if dividend_yield > 2 and payout_ratio <= 60:
+    print("Good dividend stock")
+else:
+    print("Dividend may not be sustainable")
+
+market_cap = 150000  # in crores
+sector_leader = True
+if market_cap > 100000 and sector_leader:
+    print("Blue-chip sector leader")
+else:
+    print("Mid or small cap stock")
+
+eps = 80
+pe = 10
+if eps > 50 and pe < 12:
+    print("Strong earnings with cheap valuation")
+else:
+    print("Either earnings low or valuation high")
+
+price = 15
+promoter_holding = 35  # in %
+if price < 20 and promoter_holding < 40:
+    print("Avoid risky penny stock")
+else:
+    print("May be fundamentally okay")
+
+roce = 22
+eps_cagr_5yr = 18
+if roce > 20 and eps_cagr_5yr > 15:
+    print("Potential compounder stock")
+else:
+    print("May not deliver consistent growth")
+
+is_psu = True
+pb_ratio = 0.7
+dividend_yield = 4.5
+if is_psu and pb_ratio < 1 and dividend_yield > 4:
+    print("Attractive undervalued PSU")
+else:
+    print("Not an attractive PSU bet")
+
+
+stocks = {"TCS": 28.5, "INFY": 24.3, "RELIANCE": 31.2, "ITC": 19.1}
+for stock, pe in stocks.items():
+    if pe < 25:
+        print(f"{stock} is undervalued (P/E = {pe})")
+    else:
+        print(f"{stock} is overvalued (P/E = {pe})")
+
+        eps_values = [24.5, 31.2, 15.7, 45.1, 19.3]
+total = 0
+for eps in eps_values:
+    total += eps
+avg_eps = total / len(eps_values)
+print(f"Average EPS: {avg_eps}")
+
+debt_to_equity = {"HDFC": 0.8, "TATASTEEL": 1.5, "DMART": 0.0}
+for company, ratio in debt_to_equity.items():
+    if ratio == 0:
+        print(f"{company} is debt-free")
+
+
+sector_data = {
+    "Banking": [15, 18, 12],
+    "FMCG": [22, 30, 28],
+    "Auto": [8, 12, 9]
+}
+for sector, roe_list in sector_data.items():
+    count = 0
+    for roe in roe_list:
+        if roe > 15:
+            count += 1
+    print(f"{sector}: {count} stocks with ROE > 15%")
+
