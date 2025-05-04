@@ -1,0 +1,49 @@
+thistuple = ("helllo")
+print (thistuple)
+
+thistuple = ("hello", "hiii", "byeeee")
+print(len(thistuple))
+
+tuple1 = ("game", "football")
+tuple2 =  (1, 2, 3, 4)
+tuple3 = (True, False, False)
+print(tuple1)
+print(tuple2)
+
+tuple1 = ("abcd", 3000, True, 4, False)
+print (tuple1)
+
+mytuple = ("abc", "edf", "ghi")
+print(type(mytuple))
+
+a = 200
+b = 500
+if  b < a:
+ print ("b is greater than a")
+
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("a is greater than b")
+
+  a = 200
+  b = 33
+  c = 500
+  if a > b and c > a:
+   print("At least one of the conditions is True")
+
+x = 58
+
+if x > 10:
+  print("Above ten,")
+if x > 30:
+  print("and also above 30")
+else:
+  print("but not avobe 30")
+  
+  print("hellooo")
+  
