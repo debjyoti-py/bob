@@ -1,0 +1,29 @@
+
+a = 1
+while a < 10:
+      print (a)
+      a += 2
+
+numbers = [10, 25, 7, 48, 9, 4]
+even = []
+odd = []
+while len(numbers) > 0:
+    number = numbers.pop()
+    if number % 2 == 0:
+        even.append(number)
+    else:
+        odd.append(number)
+print(even)
+print(odd)
+
+word = "jamesbond"
+for char in word:
+    print(char)
+
+word = "jamesbond"
+for char in word :
+    print(char)
+
+word = "jamesbond"
+for char in word:
+    print(char)
