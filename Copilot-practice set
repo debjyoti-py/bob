@@ -109,3 +109,61 @@ for sector, roe_list in sector_data.items():
             count += 1
     print(f"{sector}: {count} stocks with ROE > 15%")
 
+margin_data = {"ASIANPAINT": 18.4, "ZOMATO": -5.2, "MARICO": 12.3}
+for stock, margin in margin_data.items():
+    if margin > 0:
+        print(f"{stock} has a positive operating margin of {margin}%")
+    else:
+        print(f"{stock} has a negative operating margin of {margin}%")  
+
+market_caps = {"HDFC": 500000, "PIDILITE": 60000, "IRCTC": 25000}  # in crores
+for stock, cap in market_caps.items():
+    if cap > 100000:
+        print(f"{stock} is a Large Cap")
+    elif cap > 10000:
+        print(f"{stock} is a Mid Cap")
+    else:
+        print(f"{stock} is a Small Cap")
+
+pe_ratios = [28, 30, 22]
+growth_rates = [14, 15, 12]
+for i in range(len(pe_ratios)):
+    peg = pe_ratios[i] / growth_rates[i]
+    print(f"Stock {i+1} PEG Ratio: {peg:.2f}")
+
+dividend_yields = {"COALINDIA": 8.5, "ITC": 3.4, "INFY": 1.9}
+for stock, dy in dividend_yields.items():
+    if dy > 2:
+        print(f"{stock} has good dividend yield: {dy}%")
+    else:
+        print(f"{stock} has low dividend yield: {dy}%")
+
+pb_ratios = {"BAJFINANCE": 10.2, "SBIN": 1.1, "IOC": 0.9}
+for stock, pb in pb_ratios.items():
+    if pb < 1.5:
+        print(f"{stock} is attractively priced on P/B basis (P/B: {pb})")
+    else:
+        print(f"{stock} is overvalued on P/B basis (P/B: {pb})")
+
+eps_growth = {
+    "TCS": [80, 92, 105],
+    "INFY": [45, 50, 52],
+    "YESBANK": [12, 8, 5]
+}
+for stock, values in eps_growth.items():
+    if values[-1] > values[0]:
+        print(f"{stock} has grown EPS from {values[0]} to {values[-1]}")
+
+def is_undervalued(pe_ratio):
+    return pe_ratio < 15  # Common benchmark for undervaluation
+
+def is_strong_roe(roe):
+    return roe > 20  # Return on Equity > 20% is generally considered strong
+
+def is_low_debt(de_ratio):
+    return de_ratio < 0.5
+
+def earnings_yield(pe_ratio):
+    return round(1 / pe_ratio * 100, 2) if pe_ratio != 0 else 0
+
+
