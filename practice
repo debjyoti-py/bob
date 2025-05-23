@@ -1,45 +1,77 @@
-thistuple = ("helllo")
-print (thistuple)
+# Example 1: Assign dividend payout ratio
+dividend = 300
+net_income = 1000
+payout_ratio = dividend / net_income
 
-thistuple = ("hello", "hiii", "byeeee")
-print(len(thistuple))
+# Example 2: Increase EPS growth tracking variable
+eps_growth = 10
+eps_growth += 2  # New value: 12%
 
-tuple1 = ("game", "football")
-tuple2 =  (1, 2, 3, 4)
-tuple3 = (True, False, False)
-print(tuple1)
-print(tuple2)
+# Example 3: Reduce debt using -=
+debt = 1000
+debt -= 200  # Repaid 200 crore debt
 
-tuple1 = ("abcd", 3000, True, 4, False)
-print (tuple1)
+# Example 4: Increase debt using +=
+debt = 1000
+debt += 200  # New value: 1200 crore
 
-mytuple = ("abc", "edf", "ghi")
-print(type(mytuple))
+# Example 1: Check if P/E is reasonable
+pe = 18
+is_pe_good = pe < 20
 
-a = 200
-b = 500
-if  b < a:
- print ("b is greater than a")
+# Example 2: Is dividend yield attractive?
+div_yield = 3.2
+if div_yield >= 3.0:
+    print("Good dividend yield")
 
-a = 200
-b = 33
-if b > a:
-  print("b is greater than a")
-elif a == b:
-  print("a and b are equal")
-else:
-  print("a is greater than b")
+# Example 3: EPS growth check
+eps_2024 = 30
+eps_2023 = 25
+print(eps_2024 > eps_2023)  # True
 
-a = 200
-b = 33
-c = 500
-if a > b and c > a:
-    print("At least one of the conditions is True")
 
-a = 200
-b = 33
-c = 500
-if a > b or a > c:
-    print("At least one of the conditions is True")
-else:
-    print("False")
+
+# Example 1: Strong fundamentals check
+pe = 15
+roe = 22
+if pe < 20 and roe > 20:
+    print("Strong fundamentals")
+
+# Example 2: Debt level warning
+de_ratio = 2.8
+if de_ratio > 2 or roe < 10:
+    print("Financial caution needed")
+
+# Example 3: Exclude low-profit stocks
+net_profit = 0
+if not net_profit > 0:
+    print("Not profitable")
+
+# Example 1: Check if data is missing
+eps = None
+if eps is None:
+    print("EPS data missing")
+
+# Example 2: Confirm object identity
+stock1 = "RELIANCE"
+stock2 = "RELIANCE"
+print(stock1 is stock2)  # True (Python caches small strings)
+
+# Example 3: Avoid wrong data
+debt = None
+if debt is not None:
+    print("Debt value available")
+
+# Example 1: Is stock in Nifty50 list?
+nifty50 = ['RELIANCE', 'TCS', 'INFY', 'HDFC']
+if 'TCS' in nifty50:
+    print("TCS is a Nifty 50 stock")
+
+# Example 2: Exclude banned stocks
+banned_stocks = ['YESBANK', 'PNB']
+if 'YESBANK' in banned_stocks:
+    print("Avoid trading YESBANK")
+
+# Example 3: Check if metric is tracked
+metrics = ['EPS', 'PE', 'ROE']
+print('ROCE' not in metrics)  # True
