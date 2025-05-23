@@ -87,3 +87,18 @@ if __name__ == "__main__":
         message = format_message(stock_data)
         result = send_telegram_message(message)
         print("Message sent successfully!" if result.get('ok') else "Failed to send message")
+
+        stock_data = get_fundamental_data('AAPL')
+if not stock_data.get('Symbol'):
+    print("Failed to retrieve data")
+else:
+    message = format_message(stock_data)
+    result = send_telegram_message(message)
+    print("Message sent successfully!" if result.get('ok') else "Failed to send message")
+
+print("\U0001F522 P/E Ratio: 29.34")
+print("\U0001F4B8 Market Cap: $2600000000000")
+print("\U0001F3AF Dividend Yield: 0.0056")
+print("\U0001F4C8 EPS: 5.67")
+print("\U0001F3E7 ROE (TTM): 147.95")
+print("\U0001F4C5 52-Week Range: 124.17 - 198.23")
